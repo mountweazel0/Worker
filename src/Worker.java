@@ -9,9 +9,13 @@ public class Worker {
 
     public void start() {
         for (int i = 0; i < 100; i++) {
-            callback.onDone("Task " + i + " is done");
+            if (i != 33) {
+                callback.onDone("Task " + i + " is done");
+            } else {
+                System.out.println("Ошибка! Задача не выполнена");
+            }
         }
+
+
     }
-
-
 }
