@@ -12,10 +12,9 @@ public class Worker {
             if (i != 33) {
                 callback.onDone("Task " + i + " is done");
             } else {
-                System.out.println("Ошибка! Задача не выполнена");
+                errorCallback.onError("Error! Task " + i + " is not completed");
             }
         }
-
 
     }
 }
